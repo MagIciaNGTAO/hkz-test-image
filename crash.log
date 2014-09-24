@@ -1,0 +1,572 @@
+2014/09/23 18:58:13 Packer Version: 0.7.1  
+2014/09/23 18:58:13 Packer Target OS/Arch: linux amd64
+2014/09/23 18:58:13 Built with Go Version: go1.3.1
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: amazon-chroot = /usr/local/bin/packer-builder-amazon-chroot
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: amazon-ebs = /usr/local/bin/packer-builder-amazon-ebs
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: amazon-instance = /usr/local/bin/packer-builder-amazon-instance
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: digitalocean = /usr/local/bin/packer-builder-digitalocean
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: docker = /usr/local/bin/packer-builder-docker
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: googlecompute = /usr/local/bin/packer-builder-googlecompute
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: null = /usr/local/bin/packer-builder-null
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: openstack = /usr/local/bin/packer-builder-openstack
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: parallels-iso = /usr/local/bin/packer-builder-parallels-iso
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: parallels-pvm = /usr/local/bin/packer-builder-parallels-pvm
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: qemu = /usr/local/bin/packer-builder-qemu
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: virtualbox-iso = /usr/local/bin/packer-builder-virtualbox-iso
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: virtualbox-ovf = /usr/local/bin/packer-builder-virtualbox-ovf
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: vmware-iso = /usr/local/bin/packer-builder-vmware-iso
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: vmware-vmx = /usr/local/bin/packer-builder-vmware-vmx
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: build = /usr/local/bin/packer-command-build
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: fix = /usr/local/bin/packer-command-fix
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: inspect = /usr/local/bin/packer-command-inspect
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: validate = /usr/local/bin/packer-command-validate
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: compress = /usr/local/bin/packer-post-processor-compress
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: docker-import = /usr/local/bin/packer-post-processor-docker-import
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: docker-push = /usr/local/bin/packer-post-processor-docker-push
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: docker-save = /usr/local/bin/packer-post-processor-docker-save
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: docker-tag = /usr/local/bin/packer-post-processor-docker-tag
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: vagrant = /usr/local/bin/packer-post-processor-vagrant
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: vagrant-cloud = /usr/local/bin/packer-post-processor-vagrant-cloud
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: vsphere = /usr/local/bin/packer-post-processor-vsphere
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: ansible-local = /usr/local/bin/packer-provisioner-ansible-local
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: chef-client = /usr/local/bin/packer-provisioner-chef-client
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: chef-solo = /usr/local/bin/packer-provisioner-chef-solo
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: file = /usr/local/bin/packer-provisioner-file
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: puppet-masterless = /usr/local/bin/packer-provisioner-puppet-masterless
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: puppet-server = /usr/local/bin/packer-provisioner-puppet-server
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: salt-masterless = /usr/local/bin/packer-provisioner-salt-masterless
+2014/09/23 18:58:13 [DEBUG] Discoverd plugin: shell = /usr/local/bin/packer-provisioner-shell
+2014/09/23 18:58:13 Detected home directory from env var: /home/saden
+2014/09/23 18:58:13 Detected home directory from env var: /home/saden
+2014/09/23 18:58:13 Attempting to open config file: /home/saden/.packerconfig
+2014/09/23 18:58:13 File doesn't exist, but doesn't need to. Ignoring.
+2014/09/23 18:58:13 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[qemu:/usr/local/bin/packer-builder-qemu virtualbox-ovf:/usr/local/bin/packer-builder-virtualbox-ovf vmware-vmx:/usr/local/bin/packer-builder-vmware-vmx amazon-instance:/usr/local/bin/packer-builder-amazon-instance null:/usr/local/bin/packer-builder-null openstack:/usr/local/bin/packer-builder-openstack vmware-iso:/usr/local/bin/packer-builder-vmware-iso amazon-ebs:/usr/local/bin/packer-builder-amazon-ebs googlecompute:/usr/local/bin/packer-builder-googlecompute parallels-iso:/usr/local/bin/packer-builder-parallels-iso amazon-chroot:/usr/local/bin/packer-builder-amazon-chroot digitalocean:/usr/local/bin/packer-builder-digitalocean docker:/usr/local/bin/packer-builder-docker parallels-pvm:/usr/local/bin/packer-builder-parallels-pvm virtualbox-iso:/usr/local/bin/packer-builder-virtualbox-iso] Commands:map[validate:/usr/local/bin/packer-command-validate build:/usr/local/bin/packer-command-build fix:/usr/local/bin/packer-command-fix inspect:/usr/local/bin/packer-command-inspect] PostProcessors:map[docker-import:/usr/local/bin/packer-post-processor-docker-import docker-push:/usr/local/bin/packer-post-processor-docker-push docker-save:/usr/local/bin/packer-post-processor-docker-save docker-tag:/usr/local/bin/packer-post-processor-docker-tag vagrant:/usr/local/bin/packer-post-processor-vagrant vagrant-cloud:/usr/local/bin/packer-post-processor-vagrant-cloud vsphere:/usr/local/bin/packer-post-processor-vsphere compress:/usr/local/bin/packer-post-processor-compress] Provisioners:map[puppet-server:/usr/local/bin/packer-provisioner-puppet-server salt-masterless:/usr/local/bin/packer-provisioner-salt-masterless shell:/usr/local/bin/packer-provisioner-shell ansible-local:/usr/local/bin/packer-provisioner-ansible-local chef-client:/usr/local/bin/packer-provisioner-chef-client chef-solo:/usr/local/bin/packer-provisioner-chef-solo file:/usr/local/bin/packer-provisioner-file puppet-masterless:/usr/local/bin/packer-provisioner-puppet-masterless]}
+2014/09/23 18:58:13 Setting cache directory: /home/saden/workspace/projects/fitburio/hkz-test-image/packer_cache
+2014/09/23 18:58:13 Environment.Cli: []string{"build", "test.json"}
+2014/09/23 18:58:13 command + args: []string{"build", "test.json"}
+2014/09/23 18:58:13 Loading command: build
+2014/09/23 18:58:13 Creating plugin client for path: /usr/local/bin/packer-command-build
+2014/09/23 18:58:13 Starting plugin: /usr/local/bin/packer-command-build []string{"/usr/local/bin/packer-command-build"}
+2014/09/23 18:58:13 Detected home directory from env var: /home/saden
+2014/09/23 18:58:13 Waiting for RPC address for: /usr/local/bin/packer-command-build
+2014/09/23 18:58:13 packer-command-build: 2014/09/23 18:58:13 Plugin build against Packer ''
+2014/09/23 18:58:13 packer-command-build: 2014/09/23 18:58:13 Plugin minimum port: 10000
+2014/09/23 18:58:13 packer-command-build: 2014/09/23 18:58:13 Plugin maximum port: 25000
+2014/09/23 18:58:13 packer-command-build: 2014/09/23 18:58:13 Plugin address: unix /tmp/packer-plugin462579933
+2014/09/23 18:58:13 packer-command-build: 2014/09/23 18:58:13 Waiting for connection...
+2014/09/23 18:58:13 packer-command-build: 2014/09/23 18:58:13 Serving a plugin connection...
+2014/09/23 18:58:13 Executing command: build
+2014/09/23 18:58:13 packer-command-build: 2014/09/23 18:58:13 Reading template: test.json
+2014/09/23 18:58:13 packer-command-build: 2014/09/23 18:58:13 Creating build: docker
+2014/09/23 18:58:13 Loading builder: docker
+2014/09/23 18:58:13 Creating plugin client for path: /usr/local/bin/packer-builder-docker
+2014/09/23 18:58:13 Starting plugin: /usr/local/bin/packer-builder-docker []string{"/usr/local/bin/packer-builder-docker"}
+2014/09/23 18:58:13 Waiting for RPC address for: /usr/local/bin/packer-builder-docker
+2014/09/23 18:58:13 packer-builder-docker: 2014/09/23 18:58:13 Plugin build against Packer ''
+2014/09/23 18:58:13 packer-builder-docker: 2014/09/23 18:58:13 Plugin minimum port: 10000
+2014/09/23 18:58:13 packer-builder-docker: 2014/09/23 18:58:13 Plugin maximum port: 25000
+2014/09/23 18:58:13 packer-builder-docker: 2014/09/23 18:58:13 Plugin address: unix /tmp/packer-plugin364805983
+2014/09/23 18:58:13 packer-builder-docker: 2014/09/23 18:58:13 Waiting for connection...
+2014/09/23 18:58:13 packer-builder-docker: 2014/09/23 18:58:13 Serving a plugin connection...
+2014/09/23 18:58:13 Loading post-processor: docker-tag
+2014/09/23 18:58:13 Creating plugin client for path: /usr/local/bin/packer-post-processor-docker-tag
+2014/09/23 18:58:13 Starting plugin: /usr/local/bin/packer-post-processor-docker-tag []string{"/usr/local/bin/packer-post-processor-docker-tag"}
+2014/09/23 18:58:13 Waiting for RPC address for: /usr/local/bin/packer-post-processor-docker-tag
+2014/09/23 18:58:13 packer-post-processor-docker-tag: 2014/09/23 18:58:13 Plugin build against Packer ''
+2014/09/23 18:58:13 packer-post-processor-docker-tag: 2014/09/23 18:58:13 Plugin minimum port: 10000
+2014/09/23 18:58:13 packer-post-processor-docker-tag: 2014/09/23 18:58:13 Plugin maximum port: 25000
+2014/09/23 18:58:13 packer-post-processor-docker-tag: 2014/09/23 18:58:13 Plugin address: unix /tmp/packer-plugin083034662
+2014/09/23 18:58:13 packer-post-processor-docker-tag: 2014/09/23 18:58:13 Waiting for connection...
+2014/09/23 18:58:13 packer-post-processor-docker-tag: 2014/09/23 18:58:13 Serving a plugin connection...
+2014/09/23 18:58:13 Loading provisioner: file
+2014/09/23 18:58:13 Creating plugin client for path: /usr/local/bin/packer-provisioner-file
+2014/09/23 18:58:13 Starting plugin: /usr/local/bin/packer-provisioner-file []string{"/usr/local/bin/packer-provisioner-file"}
+2014/09/23 18:58:13 Waiting for RPC address for: /usr/local/bin/packer-provisioner-file
+2014/09/23 18:58:13 packer-provisioner-file: 2014/09/23 18:58:13 Plugin build against Packer ''
+2014/09/23 18:58:13 packer-provisioner-file: 2014/09/23 18:58:13 Plugin minimum port: 10000
+2014/09/23 18:58:13 packer-provisioner-file: 2014/09/23 18:58:13 Plugin maximum port: 25000
+2014/09/23 18:58:13 packer-provisioner-file: 2014/09/23 18:58:13 Plugin address: unix /tmp/packer-plugin878990501
+2014/09/23 18:58:13 packer-provisioner-file: 2014/09/23 18:58:13 Waiting for connection...
+2014/09/23 18:58:13 packer-provisioner-file: 2014/09/23 18:58:13 Serving a plugin connection...
+2014/09/23 18:58:13 Loading provisioner: shell
+2014/09/23 18:58:13 Creating plugin client for path: /usr/local/bin/packer-provisioner-shell
+2014/09/23 18:58:13 Starting plugin: /usr/local/bin/packer-provisioner-shell []string{"/usr/local/bin/packer-provisioner-shell"}
+2014/09/23 18:58:13 Waiting for RPC address for: /usr/local/bin/packer-provisioner-shell
+2014/09/23 18:58:13 packer-provisioner-shell: 2014/09/23 18:58:13 Plugin build against Packer ''
+2014/09/23 18:58:13 packer-provisioner-shell: 2014/09/23 18:58:13 Plugin minimum port: 10000
+2014/09/23 18:58:13 packer-provisioner-shell: 2014/09/23 18:58:13 Plugin maximum port: 25000
+2014/09/23 18:58:13 packer-provisioner-shell: 2014/09/23 18:58:13 Plugin address: unix /tmp/packer-plugin872117250
+2014/09/23 18:58:13 packer-provisioner-shell: 2014/09/23 18:58:13 Waiting for connection...
+2014/09/23 18:58:13 packer-provisioner-shell: 2014/09/23 18:58:13 Serving a plugin connection...
+2014/09/23 18:58:13 ui: [1;32mdocker output will be in this color.[0m
+2014/09/23 18:58:13 ui: 
+2014/09/23 18:58:13 packer-command-build: 2014/09/23 18:58:13 Build debug mode: false
+2014/09/23 18:58:13 packer-command-build: 2014/09/23 18:58:13 Force build: false
+2014/09/23 18:58:13 packer-command-build: 2014/09/23 18:58:13 Preparing build: docker
+2014/09/23 18:58:13 packer-command-build: 2014/09/23 18:58:13 Waiting on builds to complete...
+2014/09/23 18:58:13 packer-command-build: 2014/09/23 18:58:13 Starting build run: docker
+2014/09/23 18:58:13 packer-command-build: 2014/09/23 18:58:13 Running builder: docker
+2014/09/23 18:58:13 ui: [1;32m==> docker: Creating a temporary directory for sharing data...[0m
+2014/09/23 18:58:13 ui: [1;32m==> docker: Pulling Docker image: fitbur/oracle-jdk:latest[0m
+2014/09/23 18:58:13 packer-builder-docker: 2014/09/23 18:58:13 Executing: /usr/bin/docker [pull fitbur/oracle-jdk:latest]
+2014/09/23 18:58:13 ui: [0;32m    docker: Pulling repository fitbur/oracle-jdk[0m
+2014/09/23 18:58:53 ui: [1;32m==> docker: Starting docker container...[0m
+2014/09/23 18:58:53 ui: [0;32m    docker: Run command: docker run -v /tmp/packer-docker130016050:/packer-files -d -i -t fitbur/oracle-jdk:latest /bin/bash[0m
+2014/09/23 18:58:53 packer-builder-docker: 2014/09/23 18:58:53 Starting container with args: [run -v /tmp/packer-docker130016050:/packer-files -d -i -t fitbur/oracle-jdk:latest /bin/bash]
+2014/09/23 18:58:53 packer-builder-docker: 2014/09/23 18:58:53 Waiting for container to finish starting
+2014/09/23 18:58:53 ui: [0;32m    docker: Container ID: b5365363e355d642de6902a86a820de25d42afe69a8c5d92502a211a4c953662[0m
+2014/09/23 18:58:53 packer-builder-docker: 2014/09/23 18:58:53 Running the provision hook
+2014/09/23 18:58:53 ui: [1;32m==> docker: Uploading resources => /tmp[0m
+2014/09/23 18:58:53 packer-builder-docker: 2014/09/23 18:58:53 Executing in container b5365363e355d642de6902a86a820de25d42afe69a8c5d92502a211a4c953662: "(set -e; mkdir -p /tmp/resources; cp -R /packer-files/dirupload210454761/* /tmp/resources) >/packer-files/cmd850429236 2>&1; echo $? >/packer-files/cmd850429236-exit"
+2014/09/23 18:58:55 packer-builder-docker: 2014/09/23 18:58:55 Waiting for exit code to appear for remote command...
+2014/09/23 18:58:56 packer-builder-docker: 2014/09/23 18:58:56 Executed command exit status: 0
+2014/09/23 18:58:57 ui: [1;32m==> docker: Provisioning with shell script: provision.sh[0m
+2014/09/23 18:58:57 packer-provisioner-shell: 2014/09/23 18:58:57 Opening provision.sh for reading
+2014/09/23 18:58:57 packer-provisioner-shell: 2014/09/23 18:58:57 [INFO] 380 bytes written for 'uploadData'
+2014/09/23 18:58:57 [INFO] 380 bytes written for 'uploadData'
+2014/09/23 18:58:57 packer-command-build: 2014/09/23 18:58:57 [INFO] 380 bytes written for 'uploadData'
+2014/09/23 18:58:57 [INFO] 380 bytes written for 'uploadData'
+2014/09/23 18:58:57 packer-builder-docker: 2014/09/23 18:58:57 Executing in container b5365363e355d642de6902a86a820de25d42afe69a8c5d92502a211a4c953662: "(cp /packer-files/upload646737667 /tmp/script.sh) >/packer-files/cmd246128774 2>&1; echo $? >/packer-files/cmd246128774-exit"
+2014/09/23 18:58:59 packer-builder-docker: 2014/09/23 18:58:59 Waiting for exit code to appear for remote command...
+2014/09/23 18:59:00 packer-builder-docker: 2014/09/23 18:59:00 Executed command exit status: 0
+2014/09/23 18:59:01 packer-builder-docker: 2014/09/23 18:59:01 Executing in container b5365363e355d642de6902a86a820de25d42afe69a8c5d92502a211a4c953662: "(chmod 0777 /tmp/script.sh) >/packer-files/cmd214050861 2>&1; echo $? >/packer-files/cmd214050861-exit"
+2014/09/23 18:59:03 packer-builder-docker: 2014/09/23 18:59:03 Waiting for exit code to appear for remote command...
+2014/09/23 18:59:04 packer-builder-docker: 2014/09/23 18:59:04 Executed command exit status: 0
+2014/09/23 18:59:05 packer-builder-docker: 2014/09/23 18:59:05 [INFO] RPC endpoint: Communicator ended with: 0
+2014/09/23 18:59:05 [INFO] RPC client: Communicator ended with: 0
+2014/09/23 18:59:05 [INFO] RPC endpoint: Communicator ended with: 0
+2014/09/23 18:59:05 packer-command-build: 2014/09/23 18:59:05 [INFO] RPC client: Communicator ended with: 0
+2014/09/23 18:59:05 packer-command-build: 2014/09/23 18:59:05 [INFO] RPC endpoint: Communicator ended with: 0
+2014/09/23 18:59:05 [INFO] RPC client: Communicator ended with: 0
+2014/09/23 18:59:05 [INFO] RPC endpoint: Communicator ended with: 0
+2014/09/23 18:59:05 packer-provisioner-shell: 2014/09/23 18:59:05 [INFO] RPC client: Communicator ended with: 0
+2014/09/23 18:59:05 packer-builder-docker: 2014/09/23 18:59:05 Executing in container b5365363e355d642de6902a86a820de25d42afe69a8c5d92502a211a4c953662: "(chmod +x /tmp/script.sh; PACKER_BUILD_NAME=docker PACKER_BUILDER_TYPE=docker /tmp/script.sh) >/packer-files/cmd924837800 2>&1; echo $? >/packer-files/cmd924837800-exit"
+2014/09/23 18:59:07 packer-builder-docker: 2014/09/23 18:59:07 Waiting for exit code to appear for remote command...
+2014/09/23 18:59:07 ui: [0;32m    docker: % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current[0m
+2014/09/23 18:59:07 ui: [0;32m    docker: Dload  Upload   Total   Spent    Left  Speed[0m
+2014/09/23 18:59:07 ui: [0;32m    docker: 0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0[0m
+2014/09/23 18:59:08 ui: [0;32m    docker: 0 14.3M    0 21573    0     0  34700      0  0:07:14 --:--:--  0:07:14 34683[0m
+2014/09/23 18:59:09 ui: [0;32m    docker: 1 14.3M    1  246k    0     0   161k      0  0:01:31  0:00:01  0:01:30  161k[0m
+2014/09/23 18:59:10 ui: [0;32m    docker: 5 14.3M    5  808k    0     0   311k      0  0:00:47  0:00:02  0:00:45  311k[0m
+2014/09/23 18:59:11 ui: [0;32m    docker: 8 14.3M    8 1323k    0     0   377k      0  0:00:38  0:00:03  0:00:35  377k[0m
+2014/09/23 18:59:12 ui: [0;32m    docker: 13 14.3M   13 1979k    0     0   433k      0  0:00:33  0:00:04  0:00:29  433k[0m
+2014/09/23 18:59:13 ui: [0;32m    docker: 16 14.3M   16 2419k    0     0   429k      0  0:00:34  0:00:05  0:00:29  478k[0m
+2014/09/23 18:59:14 ui: [0;32m    docker: 18 14.3M   18 2769k    0     0   422k      0  0:00:34  0:00:06  0:00:28  503k[0m
+2014/09/23 18:59:15 ui: [0;32m    docker: 21 14.3M   21 3231k    0     0   424k      0  0:00:34  0:00:07  0:00:27  483k[0m
+2014/09/23 18:59:16 ui: [0;32m    docker: 24 14.3M   24 3674k    0     0   431k      0  0:00:34  0:00:08  0:00:26  468k[0m
+2014/09/23 18:59:17 ui: [0;32m    docker: 28 14.3M   28 4246k    0     0   443k      0  0:00:33  0:00:09  0:00:24  452k[0m
+2014/09/23 18:59:18 ui: [0;32m    docker: 32 14.3M   32 4811k    0     0   458k      0  0:00:32  0:00:10  0:00:22  491k[0m
+2014/09/23 18:59:19 ui: [0;32m    docker: 37 14.3M   37 5475k    0     0   473k      0  0:00:31  0:00:11  0:00:20  540k[0m
+2014/09/23 18:59:20 ui: [0;32m    docker: 42 14.3M   42 6203k    0     0   491k      0  0:00:29  0:00:12  0:00:17  593k[0m
+2014/09/23 18:59:21 ui: [0;32m    docker: 46 14.3M   46 6893k    0     0   509k      0  0:00:28  0:00:13  0:00:15  642k[0m
+2014/09/23 18:59:22 ui: [0;32m    docker: 52 14.3M   52 7746k    0     0   530k      0  0:00:27  0:00:14  0:00:13  698k[0m
+2014/09/23 18:59:23 ui: [0;32m    docker: 57 14.3M   57 8525k    0     0   549k      0  0:00:26  0:00:15  0:00:11  742k[0m
+2014/09/23 18:59:24 ui: [0;32m    docker: 63 14.3M   63 9392k    0     0   566k      0  0:00:25  0:00:16  0:00:09  781k[0m
+2014/09/23 18:59:25 ui: [0;32m    docker: 67 14.3M   67 9884k    0     0   563k      0  0:00:26  0:00:17  0:00:09  750k[0m
+2014/09/23 18:59:26 ui: [0;32m    docker: 70 14.3M   70 10.1M    0     0   559k      0  0:00:26  0:00:18  0:00:08  696k[0m
+2014/09/23 18:59:27 ui: [0;32m    docker: 72 14.3M   72 10.4M    0     0   545k      0  0:00:26  0:00:19  0:00:07  588k[0m
+2014/09/23 18:59:28 ui: [0;32m    docker: 73 14.3M   73 10.5M    0     0   528k      0  0:00:27  0:00:20  0:00:07  464k[0m
+2014/09/23 18:59:29 ui: [0;32m    docker: 75 14.3M   75 10.8M    0     0   513k      0  0:00:28  0:00:21  0:00:07  337k[0m
+2014/09/23 18:59:29 ui: [0;32m    docker: 77 14.3M   77 11.0M    0     0   503k      0  0:00:29  0:00:22  0:00:07  291k[0m
+2014/09/23 18:59:31 ui: [0;32m    docker: 79 14.3M   79 11.3M    0     0   494k      0  0:00:29  0:00:23  0:00:06  250k[0m
+2014/09/23 18:59:32 ui: [0;32m    docker: 81 14.3M   81 11.7M    0     0   487k      0  0:00:30  0:00:24  0:00:06  261k[0m
+2014/09/23 18:59:33 ui: [0;32m    docker: 83 14.3M   83 12.0M    0     0   484k      0  0:00:30  0:00:25  0:00:05  300k[0m
+2014/09/23 18:59:34 ui: [0;32m    docker: 87 14.3M   87 12.5M    0     0   481k      0  0:00:30  0:00:26  0:00:04  344k[0m
+2014/09/23 18:59:35 ui: [0;32m    docker: 90 14.3M   90 12.9M    0     0   481k      0  0:00:30  0:00:27  0:00:03  381k[0m
+2014/09/23 18:59:36 ui: [0;32m    docker: 93 14.3M   93 13.4M    0     0   481k      0  0:00:30  0:00:28  0:00:02  424k[0m
+2014/09/23 18:59:37 ui: [0;32m    docker: 97 14.3M   97 14.0M    0     0   485k      0  0:00:30  0:00:29  0:00:01  472k[0m
+2014/09/23 18:59:37 ui: [0;32m    docker: 100 14.3M  100 14.3M    0     0   486k      0  0:00:30  0:00:30 --:--:--  500k[0m
+2014/09/23 18:59:37 ui: [0;32m    docker: % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current[0m
+2014/09/23 18:59:37 ui: [0;32m    docker: Dload  Upload   Total   Spent    Left  Speed[0m
+2014/09/23 18:59:37 ui: [0;32m    docker: 0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0[0m
+2014/09/23 18:59:38 ui: [0;32m    docker: 0 16.8M    0  4121    0     0  13016      0  0:22:39 --:--:--  0:22:39 13000[0m
+2014/09/23 18:59:39 ui: [0;32m    docker: 1 16.8M    1  213k    0     0   155k      0  0:01:51  0:00:01  0:01:50  155k[0m
+2014/09/23 18:59:40 ui: [0;32m    docker: 3 16.8M    3  548k    0     0   240k      0  0:01:11  0:00:02  0:01:09  240k[0m
+2014/09/23 18:59:41 ui: [0;32m    docker: 5 16.8M    5  966k    0     0   289k      0  0:00:59  0:00:03  0:00:56  289k[0m
+2014/09/23 18:59:42 ui: [0;32m    docker: 8 16.8M    8 1442k    0     0   327k      0  0:00:52  0:00:04  0:00:48  327k[0m
+2014/09/23 18:59:43 ui: [0;32m    docker: 10 16.8M   10 1883k    0     0   354k      0  0:00:48  0:00:05  0:00:43  376k[0m
+2014/09/23 18:59:44 ui: [0;32m    docker: 14 16.8M   14 2455k    0     0   385k      0  0:00:44  0:00:06  0:00:38  448k[0m
+2014/09/23 18:59:45 ui: [0;32m    docker: 17 16.8M   17 2991k    0     0   410k      0  0:00:42  0:00:07  0:00:35  488k[0m
+2014/09/23 18:59:46 ui: [0;32m    docker: 21 16.8M   21 3668k    0     0   439k      0  0:00:39  0:00:08  0:00:31  541k[0m
+2014/09/23 18:59:47 ui: [0;32m    docker: 24 16.8M   24 4255k    0     0   452k      0  0:00:38  0:00:09  0:00:29  563k[0m
+2014/09/23 18:59:48 ui: [0;32m    docker: 25 16.8M   25 4480k    0     0   434k      0  0:00:39  0:00:10  0:00:29  519k[0m
+2014/09/23 18:59:49 ui: [0;32m    docker: 27 16.8M   27 4715k    0     0   414k      0  0:00:41  0:00:11  0:00:30  451k[0m
+2014/09/23 18:59:50 ui: [0;32m    docker: 28 16.8M   28 4954k    0     0   402k      0  0:00:42  0:00:12  0:00:30  391k[0m
+2014/09/23 18:59:51 ui: [0;32m    docker: 30 16.8M   30 5282k    0     0   395k      0  0:00:43  0:00:13  0:00:30  321k[0m
+2014/09/23 18:59:51 ui: [0;32m    docker: 32 16.8M   32 5596k    0     0   392k      0  0:00:44  0:00:14  0:00:30  274k[0m
+2014/09/23 18:59:53 ui: [0;32m    docker: 34 16.8M   34 6017k    0     0   392k      0  0:00:44  0:00:15  0:00:29  305k[0m
+2014/09/23 18:59:54 ui: [0;32m    docker: 37 16.8M   37 6499k    0     0   396k      0  0:00:43  0:00:16  0:00:27  355k[0m
+2014/09/23 18:59:55 ui: [0;32m    docker: 40 16.8M   40 6956k    0     0   402k      0  0:00:42  0:00:17  0:00:25  399k[0m
+2014/09/23 18:59:56 ui: [0;32m    docker: 43 16.8M   43 7532k    0     0   410k      0  0:00:42  0:00:18  0:00:24  449k[0m
+2014/09/23 18:59:57 ui: [0;32m    docker: 46 16.8M   46 8076k    0     0   418k      0  0:00:41  0:00:19  0:00:22  494k[0m
+2014/09/23 18:59:58 ui: [0;32m    docker: 50 16.8M   50 8749k    0     0   431k      0  0:00:40  0:00:20  0:00:20  550k[0m
+2014/09/23 18:59:59 ui: [0;32m    docker: 54 16.8M   54 9391k    0     0   440k      0  0:00:39  0:00:21  0:00:18  589k[0m
+2014/09/23 19:00:00 ui: [0;32m    docker: 58 16.8M   58  9.9M    0     0   455k      0  0:00:37  0:00:22  0:00:15  638k[0m
+2014/09/23 19:00:01 ui: [0;32m    docker: 63 16.8M   63 10.6M    0     0   468k      0  0:00:36  0:00:23  0:00:13  687k[0m
+2014/09/23 19:00:02 ui: [0;32m    docker: 68 16.8M   68 11.5M    0     0   484k      0  0:00:35  0:00:24  0:00:11  737k[0m
+2014/09/23 19:00:02 ui: [0;32m    docker: 71 16.8M   71 12.1M    0     0   491k      0  0:00:35  0:00:25  0:00:10  736k[0m
+2014/09/23 19:00:04 ui: [0;32m    docker: 74 16.8M   74 12.6M    0     0   490k      0  0:00:35  0:00:26  0:00:09  701k[0m
+2014/09/23 19:00:05 ui: [0;32m    docker: 77 16.8M   77 13.1M    0     0   493k      0  0:00:34  0:00:27  0:00:07  667k[0m
+2014/09/23 19:00:06 ui: [0;32m    docker: 81 16.8M   81 13.7M    0     0   495k      0  0:00:34  0:00:28  0:00:06  622k[0m
+2014/09/23 19:00:06 ui: [0;32m    docker: 85 16.8M   85 14.3M    0     0   502k      0  0:00:34  0:00:29  0:00:05  590k[0m
+2014/09/23 19:00:08 ui: [0;32m    docker: 88 16.8M   88 15.0M    0     0   507k      0  0:00:34  0:00:30  0:00:04  588k[0m
+2014/09/23 19:00:09 ui: [0;32m    docker: 93 16.8M   93 15.7M    0     0   515k      0  0:00:33  0:00:31  0:00:02  647k[0m
+2014/09/23 19:00:09 ui: [0;32m    docker: 97 16.8M   97 16.5M    0     0   524k      0  0:00:32  0:00:32 --:--:--  694k[0m
+2014/09/23 19:00:10 ui: [0;32m    docker: 100 16.8M  100 16.8M    0     0   528k      0  0:00:32  0:00:32 --:--:--  737k[0m
+2014/09/23 19:00:10 ui: [0;32m    docker: % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current[0m
+2014/09/23 19:00:10 ui: [0;32m    docker: Dload  Upload   Total   Spent    Left  Speed[0m
+2014/09/23 19:00:10 ui: [0;32m    docker: 0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0[0m
+2014/09/23 19:00:11 ui: [0;32m    docker: 0 82.2M    0 24467    0     0  38902      0  0:36:57 --:--:--  0:36:57 38898[0m
+2014/09/23 19:00:11 ui: [0;32m    docker: 0 82.2M    0  265k    0     0   172k      0  0:08:08  0:00:01  0:08:07  172k[0m
+2014/09/23 19:00:13 ui: [0;32m    docker: 0 82.2M    0  737k    0     0   283k      0  0:04:57  0:00:02  0:04:55  283k[0m
+2014/09/23 19:00:14 ui: [0;32m    docker: 1 82.2M    1 1250k    0     0   340k      0  0:04:07  0:00:03  0:04:04  340k[0m
+2014/09/23 19:00:15 ui: [0;32m    docker: 2 82.2M    2 1731k    0     0   377k      0  0:03:42  0:00:04  0:03:38  377k[0m
+2014/09/23 19:00:16 ui: [0;32m    docker: 2 82.2M    2 2335k    0     0   413k      0  0:03:23  0:00:05  0:03:18  460k[0m
+2014/09/23 19:00:16 ui: [0;32m    docker: 3 82.2M    3 2884k    0     0   439k      0  0:03:11  0:00:06  0:03:05  521k[0m
+2014/09/23 19:00:18 ui: [0;32m    docker: 4 82.2M    4 3580k    0     0   469k      0  0:02:59  0:00:07  0:02:52  566k[0m
+2014/09/23 19:00:19 ui: [0;32m    docker: 5 82.2M    5 4324k    0     0   498k      0  0:02:49  0:00:08  0:02:41  613k[0m
+2014/09/23 19:00:20 ui: [0;32m    docker: 5 82.2M    5 5011k    0     0   522k      0  0:02:41  0:00:09  0:02:32  654k[0m
+2014/09/23 19:00:21 ui: [0;32m    docker: 6 82.2M    6 5855k    0     0   549k      0  0:02:33  0:00:10  0:02:23  702k[0m
+2014/09/23 19:00:21 ui: [0;32m    docker: 7 82.2M    7 6456k    0     0   558k      0  0:02:30  0:00:11  0:02:19  712k[0m
+2014/09/23 19:00:23 ui: [0;32m    docker: 8 82.2M    8 6957k    0     0   550k      0  0:02:32  0:00:12  0:02:20  674k[0m
+2014/09/23 19:00:23 ui: [0;32m    docker: 8 82.2M    8 7174k    0     0   529k      0  0:02:39  0:00:13  0:02:26  586k[0m
+2014/09/23 19:00:25 ui: [0;32m    docker: 8 82.2M    8 7496k    0     0   513k      0  0:02:44  0:00:14  0:02:30  496k[0m
+2014/09/23 19:00:25 ui: [0;32m    docker: 9 82.2M    9 7867k    0     0   505k      0  0:02:46  0:00:15  0:02:31  410k[0m
+2014/09/23 19:00:26 ui: [0;32m    docker: 9 82.2M    9 8233k    0     0   497k      0  0:02:49  0:00:16  0:02:33  355k[0m
+2014/09/23 19:00:28 ui: [0;32m    docker: 10 82.2M   10 8716k    0     0   494k      0  0:02:50  0:00:17  0:02:33  351k[0m
+2014/09/23 19:00:28 ui: [0;32m    docker: 10 82.2M   10 9170k    0     0   494k      0  0:02:50  0:00:18  0:02:32  398k[0m
+2014/09/23 19:00:30 ui: [0;32m    docker: 11 82.2M   11 9749k    0     0   497k      0  0:02:49  0:00:19  0:02:30  449k[0m
+2014/09/23 19:00:30 ui: [0;32m    docker: 12 82.2M   12 10.1M    0     0   503k      0  0:02:47  0:00:20  0:02:27  498k[0m
+2014/09/23 19:00:32 ui: [0;32m    docker: 12 82.2M   12 10.6M    0     0   507k      0  0:02:46  0:00:21  0:02:25  540k[0m
+2014/09/23 19:00:33 ui: [0;32m    docker: 13 82.2M   13 11.4M    0     0   515k      0  0:02:43  0:00:22  0:02:21  591k[0m
+2014/09/23 19:00:33 ui: [0;32m    docker: 14 82.2M   14 12.0M    0     0   523k      0  0:02:40  0:00:23  0:02:17  630k[0m
+2014/09/23 19:00:35 ui: [0;32m    docker: 15 82.2M   15 12.8M    0     0   533k      0  0:02:37  0:00:24  0:02:13  676k[0m
+2014/09/23 19:00:35 ui: [0;32m    docker: 16 82.2M   16 13.4M    0     0   539k      0  0:02:36  0:00:25  0:02:11  687k[0m
+2014/09/23 19:00:37 ui: [0;32m    docker: 16 82.2M   16 13.8M    0     0   534k      0  0:02:37  0:00:26  0:02:11  650k[0m
+2014/09/23 19:00:37 ui: [0;32m    docker: 17 82.2M   17 14.3M    0     0   533k      0  0:02:37  0:00:27  0:02:10  614k[0m
+2014/09/23 19:00:38 ui: [0;32m    docker: 17 82.2M   17 14.8M    0     0   530k      0  0:02:38  0:00:28  0:02:10  565k[0m
+2014/09/23 19:00:40 ui: [0;32m    docker: 18 82.2M   18 15.3M    0     0   531k      0  0:02:38  0:00:29  0:02:09  520k[0m
+2014/09/23 19:00:40 ui: [0;32m    docker: 19 82.2M   19 15.9M    0     0   533k      0  0:02:37  0:00:30  0:02:07  499k[0m
+2014/09/23 19:00:42 ui: [0;32m    docker: 19 82.2M   19 16.3M    0     0   530k      0  0:02:38  0:00:31  0:02:07  511k[0m
+2014/09/23 19:00:42 ui: [0;32m    docker: 20 82.2M   20 16.7M    0     0   525k      0  0:02:40  0:00:32  0:02:08  483k[0m
+2014/09/23 19:00:44 ui: [0;32m    docker: 20 82.2M   20 17.0M    0     0   521k      0  0:02:41  0:00:33  0:02:08  465k[0m
+2014/09/23 19:00:45 ui: [0;32m    docker: 21 82.2M   21 17.5M    0     0   518k      0  0:02:42  0:00:34  0:02:08  442k[0m
+2014/09/23 19:00:45 ui: [0;32m    docker: 21 82.2M   21 17.9M    0     0   517k      0  0:02:42  0:00:35  0:02:07  421k[0m
+2014/09/23 19:00:47 ui: [0;32m    docker: 22 82.2M   22 18.5M    0     0   517k      0  0:02:42  0:00:36  0:02:06  436k[0m
+2014/09/23 19:00:47 ui: [0;32m    docker: 23 82.2M   23 19.0M    0     0   518k      0  0:02:42  0:00:37  0:02:05  474k[0m
+2014/09/23 19:00:49 ui: [0;32m    docker: 23 82.2M   23 19.6M    0     0   521k      0  0:02:41  0:00:38  0:02:03  522k[0m
+2014/09/23 19:00:49 ui: [0;32m    docker: 24 82.2M   24 20.3M    0     0   525k      0  0:02:40  0:00:39  0:02:01  579k[0m
+2014/09/23 19:00:50 ui: [0;32m    docker: 25 82.2M   25 20.9M    0     0   528k      0  0:02:39  0:00:40  0:01:59  609k[0m
+2014/09/23 19:00:52 ui: [0;32m    docker: 26 82.2M   26 21.7M    0     0   534k      0  0:02:37  0:00:41  0:01:56  657k[0m
+2014/09/23 19:00:52 ui: [0;32m    docker: 27 82.2M   27 22.4M    0     0   539k      0  0:02:36  0:00:42  0:01:54  697k[0m
+2014/09/23 19:00:54 ui: [0;32m    docker: 28 82.2M   28 23.2M    0     0   544k      0  0:02:34  0:00:43  0:01:51  727k[0m
+2014/09/23 19:00:54 ui: [0;32m    docker: 28 82.2M   28 23.6M    0     0   544k      0  0:02:34  0:00:44  0:01:50  692k[0m
+2014/09/23 19:00:55 ui: [0;32m    docker: 29 82.2M   29 24.1M    0     0   543k      0  0:02:35  0:00:45  0:01:50  658k[0m
+2014/09/23 19:00:57 ui: [0;32m    docker: 30 82.2M   30 24.7M    0     0   543k      0  0:02:35  0:00:46  0:01:49  617k[0m
+2014/09/23 19:00:57 ui: [0;32m    docker: 30 82.2M   30 25.2M    0     0   542k      0  0:02:35  0:00:47  0:01:48  568k[0m
+2014/09/23 19:00:59 ui: [0;32m    docker: 31 82.2M   31 25.5M    0     0   537k      0  0:02:36  0:00:48  0:01:48  474k[0m
+2014/09/23 19:00:59 ui: [0;32m    docker: 31 82.2M   31 25.8M    0     0   534k      0  0:02:37  0:00:49  0:01:48  446k[0m
+2014/09/23 19:01:00 ui: [0;32m    docker: 31 82.2M   31 26.2M    0     0   531k      0  0:02:38  0:00:50  0:01:48  427k[0m
+2014/09/23 19:01:01 ui: [0;32m    docker: 32 82.2M   32 26.7M    0     0   530k      0  0:02:38  0:00:51  0:01:47  411k[0m
+2014/09/23 19:01:02 ui: [0;32m    docker: 33 82.2M   33 27.1M    0     0   529k      0  0:02:39  0:00:52  0:01:47  404k[0m
+2014/09/23 19:01:04 ui: [0;32m    docker: 33 82.2M   33 27.7M    0     0   529k      0  0:02:39  0:00:53  0:01:46  453k[0m
+2014/09/23 19:01:04 ui: [0;32m    docker: 34 82.2M   34 28.2M    0     0   530k      0  0:02:38  0:00:54  0:01:44  492k[0m
+2014/09/23 19:01:05 ui: [0;32m    docker: 35 82.2M   35 28.9M    0     0   532k      0  0:02:38  0:00:55  0:01:43  542k[0m
+2014/09/23 19:01:06 ui: [0;32m    docker: 35 82.2M   35 29.5M    0     0   535k      0  0:02:37  0:00:56  0:01:41  587k[0m
+2014/09/23 19:01:07 ui: [0;32m    docker: 36 82.2M   36 30.2M    0     0   538k      0  0:02:36  0:00:57  0:01:39  632k[0m
+2014/09/23 19:01:09 ui: [0;32m    docker: 37 82.2M   37 30.9M    0     0   540k      0  0:02:35  0:00:58  0:01:37  654k[0m
+2014/09/23 19:01:09 ui: [0;32m    docker: 38 82.2M   38 31.4M    0     0   540k      0  0:02:35  0:00:59  0:01:36  642k[0m
+2014/09/23 19:01:11 ui: [0;32m    docker: 38 82.2M   38 31.9M    0     0   539k      0  0:02:36  0:01:00  0:01:36  612k[0m
+2014/09/23 19:01:11 ui: [0;32m    docker: 39 82.2M   39 32.2M    0     0   537k      0  0:02:36  0:01:01  0:01:35  555k[0m
+2014/09/23 19:01:12 ui: [0;32m    docker: 39 82.2M   39 32.5M    0     0   533k      0  0:02:37  0:01:02  0:01:35  473k[0m
+2014/09/23 19:01:14 ui: [0;32m    docker: 39 82.2M   39 32.7M    0     0   526k      0  0:02:39  0:01:03  0:01:36  370k[0m
+2014/09/23 19:01:14 ui: [0;32m    docker: 39 82.2M   39 32.9M    0     0   521k      0  0:02:41  0:01:04  0:01:37  304k[0m
+2014/09/23 19:01:15 ui: [0;32m    docker: 40 82.2M   40 33.1M    0     0   517k      0  0:02:42  0:01:05  0:01:37  250k[0m
+2014/09/23 19:01:16 ui: [0;32m    docker: 40 82.2M   40 33.3M    0     0   513k      0  0:02:44  0:01:06  0:01:38  220k[0m
+2014/09/23 19:01:17 ui: [0;32m    docker: 40 82.2M   40 33.6M    0     0   510k      0  0:02:45  0:01:07  0:01:38  223k[0m
+2014/09/23 19:01:19 ui: [0;32m    docker: 41 82.2M   41 34.0M    0     0   507k      0  0:02:45  0:01:08  0:01:37  263k[0m
+2014/09/23 19:01:19 ui: [0;32m    docker: 41 82.2M   41 34.3M    0     0   506k      0  0:02:46  0:01:09  0:01:37  305k[0m
+2014/09/23 19:01:21 ui: [0;32m    docker: 42 82.2M   42 34.7M    0     0   503k      0  0:02:47  0:01:10  0:01:37  318k[0m
+2014/09/23 19:01:21 ui: [0;32m    docker: 42 82.2M   42 34.8M    0     0   499k      0  0:02:48  0:01:11  0:01:37  305k[0m
+2014/09/23 19:01:22 ui: [0;32m    docker: 42 82.2M   42 35.0M    0     0   493k      0  0:02:50  0:01:12  0:01:38  272k[0m
+2014/09/23 19:01:23 ui: [0;32m    docker: 42 82.2M   42 35.2M    0     0   490k      0  0:02:51  0:01:13  0:01:38  245k[0m
+2014/09/23 19:01:24 ui: [0;32m    docker: 43 82.2M   43 35.4M    0     0   486k      0  0:02:53  0:01:14  0:01:39  215k[0m
+2014/09/23 19:01:26 ui: [0;32m    docker: 43 82.2M   43 35.7M    0     0   483k      0  0:02:54  0:01:15  0:01:39  212k[0m
+2014/09/23 19:01:26 ui: [0;32m    docker: 43 82.2M   43 36.0M    0     0   481k      0  0:02:54  0:01:16  0:01:38  238k[0m
+2014/09/23 19:01:28 ui: [0;32m    docker: 44 82.2M   44 36.4M    0     0   480k      0  0:02:55  0:01:17  0:01:38  282k[0m
+2014/09/23 19:01:28 ui: [0;32m    docker: 44 82.2M   44 36.7M    0     0   479k      0  0:02:55  0:01:18  0:01:37  319k[0m
+2014/09/23 19:01:29 ui: [0;32m    docker: 45 82.2M   45 37.1M    0     0   478k      0  0:02:56  0:01:19  0:01:37  349k[0m
+2014/09/23 19:01:31 ui: [0;32m    docker: 45 82.2M   45 37.4M    0     0   475k      0  0:02:57  0:01:20  0:01:37  353k[0m
+2014/09/23 19:01:31 ui: [0;32m    docker: 45 82.2M   45 37.7M    0     0   473k      0  0:02:57  0:01:21  0:01:36  349k[0m
+2014/09/23 19:01:33 ui: [0;32m    docker: 46 82.2M   46 38.1M    0     0   472k      0  0:02:58  0:01:22  0:01:36  348k[0m
+2014/09/23 19:01:33 ui: [0;32m    docker: 46 82.2M   46 38.4M    0     0   471k      0  0:02:58  0:01:23  0:01:35  342k[0m
+2014/09/23 19:01:34 ui: [0;32m    docker: 47 82.2M   47 38.9M    0     0   470k      0  0:02:58  0:01:24  0:01:34  358k[0m
+2014/09/23 19:01:35 ui: [0;32m    docker: 47 82.2M   47 39.4M    0     0   471k      0  0:02:58  0:01:25  0:01:33  403k[0m
+2014/09/23 19:01:36 ui: [0;32m    docker: 48 82.2M   48 39.9M    0     0   471k      0  0:02:58  0:01:26  0:01:32  441k[0m
+2014/09/23 19:01:37 ui: [0;32m    docker: 49 82.2M   49 40.3M    0     0   471k      0  0:02:58  0:01:27  0:01:31  464k[0m
+2014/09/23 19:01:38 ui: [0;32m    docker: 49 82.2M   49 40.6M    0     0   469k      0  0:02:59  0:01:28  0:01:31  445k[0m
+2014/09/23 19:01:40 ui: [0;32m    docker: 49 82.2M   49 41.0M    0     0   468k      0  0:02:59  0:01:29  0:01:30  433k[0m
+2014/09/23 19:01:40 ui: [0;32m    docker: 50 82.2M   50 41.3M    0     0   467k      0  0:03:00  0:01:30  0:01:30  396k[0m
+2014/09/23 19:01:41 ui: [0;32m    docker: 50 82.2M   50 41.5M    0     0   464k      0  0:03:01  0:01:31  0:01:30  344k[0m
+2014/09/23 19:01:42 ui: [0;32m    docker: 50 82.2M   50 41.8M    0     0   463k      0  0:03:01  0:01:32  0:01:29  317k[0m
+2014/09/23 19:01:43 ui: [0;32m    docker: 51 82.2M   51 42.2M    0     0   461k      0  0:03:02  0:01:33  0:01:29  321k[0m
+2014/09/23 19:01:45 ui: [0;32m    docker: 51 82.2M   51 42.6M    0     0   461k      0  0:03:02  0:01:34  0:01:28  324k[0m
+2014/09/23 19:01:45 ui: [0;32m    docker: 52 82.2M   52 43.0M    0     0   460k      0  0:03:02  0:01:35  0:01:27  342k[0m
+2014/09/23 19:01:46 ui: [0;32m    docker: 52 82.2M   52 43.5M    0     0   461k      0  0:03:02  0:01:36  0:01:26  395k[0m
+2014/09/23 19:01:47 ui: [0;32m    docker: 53 82.2M   53 44.0M    0     0   462k      0  0:03:02  0:01:37  0:01:25  438k[0m
+2014/09/23 19:01:48 ui: [0;32m    docker: 54 82.2M   54 44.5M    0     0   462k      0  0:03:02  0:01:38  0:01:24  481k[0m
+2014/09/23 19:01:49 ui: [0;32m    docker: 54 82.2M   54 45.1M    0     0   464k      0  0:03:01  0:01:39  0:01:22  532k[0m
+2014/09/23 19:01:50 ui: [0;32m    docker: 55 82.2M   55 45.8M    0     0   466k      0  0:03:00  0:01:40  0:01:20  571k[0m
+2014/09/23 19:01:51 ui: [0;32m    docker: 56 82.2M   56 46.5M    0     0   469k      0  0:02:59  0:01:41  0:01:18  621k[0m
+2014/09/23 19:01:52 ui: [0;32m    docker: 57 82.2M   57 47.3M    0     0   472k      0  0:02:58  0:01:42  0:01:16  675k[0m
+2014/09/23 19:01:53 ui: [0;32m    docker: 58 82.2M   58 48.1M    0     0   475k      0  0:02:57  0:01:43  0:01:14  724k[0m
+2014/09/23 19:01:54 ui: [0;32m    docker: 59 82.2M   59 48.9M    0     0   479k      0  0:02:55  0:01:44  0:01:11  781k[0m
+2014/09/23 19:01:55 ui: [0;32m    docker: 60 82.2M   60 49.6M    0     0   481k      0  0:02:54  0:01:45  0:01:09  787k[0m
+2014/09/23 19:01:56 ui: [0;32m    docker: 60 82.2M   60 50.1M    0     0   481k      0  0:02:54  0:01:46  0:01:08  729k[0m
+2014/09/23 19:01:57 ui: [0;32m    docker: 61 82.2M   61 50.6M    0     0   482k      0  0:02:54  0:01:47  0:01:07  686k[0m
+2014/09/23 19:01:58 ui: [0;32m    docker: 62 82.2M   62 51.2M    0     0   483k      0  0:02:54  0:01:48  0:01:06  643k[0m
+2014/09/23 19:02:00 ui: [0;32m    docker: 63 82.2M   63 51.9M    0     0   484k      0  0:02:53  0:01:49  0:01:04  585k[0m
+2014/09/23 19:02:00 ui: [0;32m    docker: 63 82.2M   63 52.3M    0     0   484k      0  0:02:53  0:01:50  0:01:03  541k[0m
+2014/09/23 19:02:01 ui: [0;32m    docker: 64 82.2M   64 52.6M    0     0   483k      0[0m
+2014/09/23 19:02:01 ui: [0;32m    docker: 0:0[0m
+2014/09/23 19:02:01 ui: [0;32m    docker: 2:54  0:01:51  0:01:0[0m
+2014/09/23 19:02:01 ui: [0;32m    docker: 3  51[0m
+2014/09/23 19:02:01 ui: [0;32m    docker: 5k[0m
+2014/09/23 19:02:02 ui: [0;32m    docker: 64 82.2M   64 53.0M    0     0   482k      0  0:02:54  0:01:52  0:01:02  485k[0m
+2014/09/23 19:02:03 ui: [0;32m    docker: 64 82.2M   64 53.4M    0     0   481k      0  0:02:54  0:01:53  0:01:01  442k[0m
+2014/09/23 19:02:04 ui: [0;32m    docker: 65 82.2M   65 53.6M    0     0   479k      0  0:02:55  0:01:54  0:01:01  366k[0m
+2014/09/23 19:02:05 ui: [0;32m    docker: 65 82.2M   65 53.9M    0     0   478k      0  0:02:56  0:01:55  0:01:01  338k[0m
+2014/09/23 19:02:06 ui: [0;32m    docker: 66 82.2M   66 54.3M    0     0   477k      0  0:02:56  0:01:56  0:01:00  338k[0m
+2014/09/23 19:02:07 ui: [0;32m    docker: 66 82.2M   66 54.6M    0     0   476k      0  0:02:56  0:01:57  0:00:59  333k[0m
+2014/09/23 19:02:08 ui: [0;32m    docker: 67 82.2M   67 55.1M    0     0   476k      0  0:02:56  0:01:58  0:00:58  353k[0m
+2014/09/23 19:02:09 ui: [0;32m    docker: 67 82.2M   67 55.6M    0     0   476k      0  0:02:56  0:01:59  0:00:57  398k[0m
+2014/09/23 19:02:10 ui: [0;32m    docker: 68 82.2M   68 56.1M    0     0   476k      0  0:02:56  0:02:00  0:00:56  446k[0m
+2014/09/23 19:02:11 ui: [0;32m    docker: 68 82.2M   68 56.7M    0     0   478k      0  0:02:56  0:02:01  0:00:55  498k[0m
+2014/09/23 19:02:12 ui: [0;32m    docker: 69 82.2M   69 57.3M    0     0   478k      0  0:02:55  0:02:02  0:00:53  542k[0m
+2014/09/23 19:02:13 ui: [0;32m    docker: 70 82.2M   70 58.0M    0     0   481k      0  0:02:55  0:02:03  0:00:52  596k[0m
+2014/09/23 19:02:14 ui: [0;32m    docker: 71 82.2M   71 58.7M    0     0   482k      0  0:02:54  0:02:04  0:00:50  637k[0m
+2014/09/23 19:02:15 ui: [0;32m    docker: 72 82.2M   72 59.5M    0     0   485k      0  0:02:53  0:02:05  0:00:48  696k[0m
+2014/09/23 19:02:16 ui: [0;32m    docker: 73 82.2M   73 60.3M    0     0   488k      0  0:02:52  0:02:06  0:00:46  744k[0m
+2014/09/23 19:02:17 ui: [0;32m    docker: 74 82.2M   74 61.2M    0     0   491k      0  0:02:51  0:02:07  0:00:44  791k[0m
+2014/09/23 19:02:18 ui: [0;32m    docker: 75 82.2M   75 61.7M    0     0   491k      0  0:02:51  0:02:08  0:00:43  754k[0m
+2014/09/23 19:02:19 ui: [0;32m    docker: 75 82.2M   75 62.2M    0     0   491k      0  0:02:51  0:02:09  0:00:42  711k[0m
+2014/09/23 19:02:20 ui: [0;32m    docker: 76 82.2M   76 62.7M    0     0   492k      0  0:02:51  0:02:10  0:00:41  671k[0m
+2014/09/23 19:02:21 ui: [0;32m    docker: 77 82.2M   77 63.4M    0     0   493k      0  0:02:50  0:02:11  0:00:39  618k[0m
+2014/09/23 19:02:22 ui: [0;32m    docker: 77 82.2M   77 64.0M    0     0   494k      0  0:02:50  0:02:12  0:00:38  579k[0m
+2014/09/23 19:02:23 packer-builder-docker: 2014/09/23 19:02:23 Received interrupt signal (count: 1). Ignoring.
+2014/09/23 19:02:23 Closing stdin because interrupt received.
+2014/09/23 19:02:23 First interrupt. Ignoring to allow plugins to clean up.
+2014/09/23 19:02:23 ui error: Interrupt signal received. Cleaning up...
+2014/09/23 19:02:23 packer-command-build: 2014/09/23 19:02:23 Received interrupt signal (count: 1). Ignoring.
+2014/09/23 19:02:23 packer-command-build: 2014/09/23 19:02:23 Stopping build: docker
+2014/09/23 19:02:23 packer-provisioner-shell: 2014/09/23 19:02:23 Received interrupt signal (count: 1). Ignoring.
+2014/09/23 19:02:23 packer-post-processor-docker-tag: 2014/09/23 19:02:23 Received interrupt signal (count: 1). Ignoring.
+2014/09/23 19:02:23 packer-provisioner-file: 2014/09/23 19:02:23 Received interrupt signal (count: 1). Ignoring.
+2014/09/23 19:02:23 packer-builder-docker: 2014/09/23 19:02:23 Cancelling the step runner...
+2014/09/23 19:02:23 ui: [0;32m    docker: 78 82.2M   78 64.7M    0     0   496k      0  0:02:49  0:02:13  0:00:36  623k[0m
+2014/09/23 19:02:24 packer-builder-docker: 2014/09/23 19:02:24 Cancelling provisioning due to interrupt...
+2014/09/23 19:02:24 /usr/local/bin/packer-provisioner-shell: plugin process exited
+2014/09/23 19:02:24 Provisioner.Cancel err: unexpected EOF
+2014/09/23 19:02:24 ui: [1;32m==> docker: Killing the container: b5365363e355d642de6902a86a820de25d42afe69a8c5d92502a211a4c953662[0m
+2014/09/23 19:02:24 packer-command-build: 2014/09/23 19:02:24 Build cancelled: docker
+2014/09/23 19:02:24 packer-builder-docker: panic: interface conversion: interface is nil, not string
+2014/09/23 19:02:24 packer-builder-docker: 
+2014/09/23 19:02:24 packer-builder-docker: goroutine 33 [running]:
+2014/09/23 19:02:24 packer-builder-docker: runtime.panic(0x7f4340, 0xc2081ce800)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/runtime/panic.c:279 +0xf5
+2014/09/23 19:02:24 packer-builder-docker: github.com/mitchellh/packer/builder/docker.(*Builder).Run(0xc20803bd20, 0x7f59066323d8, 0xc2080de160, 0x7f5906632420, 0xc2080c2130, 0x7f5906632450, 0xc208132000, 0x0, 0x0, 0x0, ...)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/mitchellh/packer/builder/docker/builder.go:79 +0x822
+2014/09/23 19:02:24 packer-builder-docker: github.com/mitchellh/packer/packer/rpc.(*BuilderServer).Run(0xc20803bd40, 0x1, 0xc2080c20c0, 0x0, 0x0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/mitchellh/packer/packer/rpc/builder.go:93 +0x34e
+2014/09/23 19:02:24 packer-builder-docker: reflect.Value.call(0x7b6580, 0x815e38, 0x0, 0x130, 0x872e50, 0x4, 0xc2080d0180, 0x3, 0x3, 0x0, ...)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/reflect/value.go:563 +0x1210
+2014/09/23 19:02:24 packer-builder-docker: reflect.Value.Call(0x7b6580, 0x815e38, 0x0, 0x130, 0xc2080d0180, 0x3, 0x3, 0x0, 0x0, 0x0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/reflect/value.go:411 +0xd7
+2014/09/23 19:02:24 packer-builder-docker: net/rpc.(*service).call(0xc2080191d0, 0xc208045580, 0xc2080c2060, 0xc2080682d0, 0xc20810e880, 0x740680, 0xc2080c20ac, 0x0, 0xa6, 0x724ec0, ...)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/net/rpc/server.go:382 +0x1c7
+2014/09/23 19:02:24 packer-builder-docker: created by net/rpc.(*Server).ServeCodec
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/net/rpc/server.go:453 +0x427
+2014/09/23 19:02:24 packer-builder-docker: 
+2014/09/23 19:02:24 packer-builder-docker: goroutine 16 [select]:
+2014/09/23 19:02:24 packer-builder-docker: github.com/hashicorp/yamux.(*Stream).Read(0xc208042000, 0xc20809d000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/hashicorp/yamux/stream.go:123 +0x382
+2014/09/23 19:02:24 packer-builder-docker: bufio.(*Reader).fill(0xc2080d00c0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/bufio/bufio.go:97 +0x1b3
+2014/09/23 19:02:24 packer-builder-docker: bufio.(*Reader).ReadByte(0xc2080d00c0, 0x8, 0x0, 0x0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/bufio/bufio.go:199 +0x7e
+2014/09/23 19:02:24 packer-builder-docker: github.com/ugorji/go/codec.(*ioDecReader).readn1(0xc2080ca120, 0xc2081d02c0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/ugorji/go/codec/decode.go:93 +0x44
+2014/09/23 19:02:24 packer-builder-docker: github.com/ugorji/go/codec.(*msgpackDecDriver).initReadNext(0xc2080de060)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/ugorji/go/codec/msgpack.go:540 +0x48
+2014/09/23 19:02:24 packer-builder-docker: github.com/ugorji/go/codec.(*Decoder).decode(0xc2080d0120, 0x7213e0, 0xc20810f180)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/ugorji/go/codec/decode.go:616 +0x58
+2014/09/23 19:02:24 packer-builder-docker: github.com/ugorji/go/codec.(*Decoder).Decode(0xc2080d0120, 0x7213e0, 0xc20810f180, 0x0, 0x0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/ugorji/go/codec/decode.go:611 +0x7c
+2014/09/23 19:02:24 packer-builder-docker: github.com/ugorji/go/codec.(*rpcCodec).read(0xc2080f2080, 0x7213e0, 0xc20810f180, 0x0, 0x0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/ugorji/go/codec/rpc.go:88 +0xd6
+2014/09/23 19:02:24 packer-builder-docker: github.com/ugorji/go/codec.(*goRpcCodec).ReadRequestHeader(0xc2080f2080, 0xc20810f180, 0x0, 0x0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/ugorji/go/codec/rpc.go:127 +0x5e
+2014/09/23 19:02:24 packer-builder-docker: net/rpc.(*Server).readRequestHeader(0xc208045580, 0x7f5906632228, 0xc2080f2080, 0x0, 0x0, 0xc20810f180, 0x94e100, 0x0, 0x0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/net/rpc/server.go:552 +0x9b
+2014/09/23 19:02:24 packer-builder-docker: net/rpc.(*Server).readRequest(0xc208045580, 0x7f5906632228, 0xc2080f2080, 0xc2080681b0, 0xc2080de080, 0x717ae0, 0x0, 0x0, 0x0, 0x0, ...)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/net/rpc/server.go:519 +0xbe
+2014/09/23 19:02:24 packer-builder-docker: net/rpc.(*Server).ServeCodec(0xc208045580, 0x7f5906632228, 0xc2080f2080)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/net/rpc/server.go:438 +0x69
+2014/09/23 19:02:24 packer-builder-docker: github.com/mitchellh/packer/packer/rpc.(*Server).Serve(0xc20803bce0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/mitchellh/packer/packer/rpc/server.go:153 +0x210
+2014/09/23 19:02:24 packer-builder-docker: main.main()
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/mitchellh/packer/plugin/builder-docker/main.go:14 +0xc5
+2014/09/23 19:02:24 packer-builder-docker: 
+2014/09/23 19:02:24 packer-builder-docker: goroutine 19 [finalizer wait]:
+2014/09/23 19:02:24 packer-builder-docker: runtime.park(0x412ee0, 0xac1038, 0xabf249)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/runtime/proc.c:1369 +0x89
+2014/09/23 19:02:24 packer-builder-docker: runtime.parkunlock(0xac1038, 0xabf249)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/runtime/proc.c:1385 +0x3b
+2014/09/23 19:02:24 packer-builder-docker: runfinq()
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/runtime/mgc0.c:2644 +0xcf
+2014/09/23 19:02:24 packer-builder-docker: runtime.goexit()
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/runtime/proc.c:1445
+2014/09/23 19:02:24 packer-builder-docker: 
+2014/09/23 19:02:24 packer-builder-docker: goroutine 20 [syscall]:
+2014/09/23 19:02:24 packer-builder-docker: os/signal.loop()
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/os/signal/signal_unix.go:21 +0x1e
+2014/09/23 19:02:24 packer-builder-docker: created by os/signal.init·1
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/os/signal/signal_unix.go:27 +0x32
+2014/09/23 19:02:24 packer-builder-docker: 
+2014/09/23 19:02:24 packer-builder-docker: goroutine 22 [chan receive]:
+2014/09/23 19:02:24 packer-builder-docker: github.com/mitchellh/packer/packer/plugin.func·023()
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/mitchellh/packer/packer/plugin/server.go:95 +0x62
+2014/09/23 19:02:24 packer-builder-docker: created by github.com/mitchellh/packer/packer/plugin.Server
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/mitchellh/packer/packer/plugin/server.go:99 +0xb34
+2014/09/23 19:02:24 packer-builder-docker: 
+2014/09/23 19:02:24 packer-builder-docker: goroutine 23 [IO wait]:
+2014/09/23 19:02:24 packer-builder-docker: net.runtime_pollWait(0x7f5906631a88, 0x72, 0x0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/runtime/netpoll.goc:146 +0x66
+2014/09/23 19:02:24 packer-builder-docker: net.(*pollDesc).Wait(0xc20802a1b0, 0x72, 0x0, 0x0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/net/fd_poll_runtime.go:84 +0x46
+2014/09/23 19:02:24 packer-builder-docker: net.(*pollDesc).WaitRead(0xc20802a1b0, 0x0, 0x0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/net/fd_poll_runtime.go:89 +0x42
+2014/09/23 19:02:24 packer-builder-docker: net.(*netFD).Read(0xc20802a150, 0xc208083000, 0x1000, 0x1000, 0x0, 0x7f59066242b8, 0xb)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/net/fd_unix.go:242 +0x34c
+2014/09/23 19:02:24 packer-builder-docker: net.(*conn).Read(0xc20803c030, 0xc208083000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/net/net.go:122 +0xe7
+2014/09/23 19:02:24 packer-builder-docker: bufio.(*Reader).fill(0xc208004240)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/bufio/bufio.go:97 +0x1b3
+2014/09/23 19:02:24 packer-builder-docker: bufio.(*Reader).Read(0xc208004240, 0xc2080c2004, 0xc, 0xc, 0xc, 0x0, 0x0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/bufio/bufio.go:175 +0x230
+2014/09/23 19:02:24 packer-builder-docker: io.ReadAtLeast(0x7f5906631d08, 0xc208004240, 0xc2080c2004, 0xc, 0xc, 0xc, 0x0, 0x0, 0x0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/io/io.go:289 +0xf7
+2014/09/23 19:02:24 packer-builder-docker: io.ReadFull(0x7f5906631d08, 0xc208004240, 0xc2080c2004, 0xc, 0xc, 0xc, 0x0, 0x0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/io/io.go:307 +0x71
+2014/09/23 19:02:24 packer-builder-docker: github.com/hashicorp/yamux.(*Session).recv(0xc20802e460)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/hashicorp/yamux/session.go:332 +0xc9
+2014/09/23 19:02:24 packer-builder-docker: created by github.com/hashicorp/yamux.newSession
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/hashicorp/yamux/session.go:93 +0x247
+2014/09/23 19:02:24 packer-builder-docker: 
+2014/09/23 19:02:24 packer-builder-docker: goroutine 24 [select]:
+2014/09/23 19:02:24 packer-builder-docker: github.com/hashicorp/yamux.(*Session).send(0xc20802e460)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/hashicorp/yamux/session.go:290 +0x496
+2014/09/23 19:02:24 packer-builder-docker: created by github.com/hashicorp/yamux.newSession
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/hashicorp/yamux/session.go:94 +0x25f
+2014/09/23 19:02:24 packer-builder-docker: 
+2014/09/23 19:02:24 packer-builder-docker: goroutine 25 [select]:
+2014/09/23 19:02:24 packer-builder-docker: github.com/hashicorp/yamux.(*Session).keepalive(0xc20802e460)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/hashicorp/yamux/session.go:246 +0xc7
+2014/09/23 19:02:24 packer-builder-docker: created by github.com/hashicorp/yamux.newSession
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/hashicorp/yamux/session.go:96 +0x289
+2014/09/23 19:02:24 packer-builder-docker: 
+2014/09/23 19:02:24 packer-builder-docker: goroutine 26 [select, 3 minutes]:
+2014/09/23 19:02:24 packer-builder-docker: github.com/hashicorp/yamux.(*Session).AcceptStream(0xc20802e460, 0xc200000001, 0x0, 0x0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/hashicorp/yamux/session.go:154 +0x11f
+2014/09/23 19:02:24 packer-builder-docker: github.com/mitchellh/packer/packer/rpc.(*muxBroker).Run(0xc20803bcc0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/mitchellh/packer/packer/rpc/mux_broker.go:126 +0x36
+2014/09/23 19:02:24 packer-builder-docker: created by github.com/mitchellh/packer/packer/rpc.NewServer
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/mitchellh/packer/packer/rpc/server.go:43 +0x77
+2014/09/23 19:02:24 packer-builder-docker: 
+2014/09/23 19:02:24 packer-builder-docker: goroutine 34 [runnable]:
+2014/09/23 19:02:24 packer-builder-docker: github.com/hashicorp/yamux.(*Stream).Read(0xc2080423c0, 0xc208131000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/hashicorp/yamux/stream.go:123 +0x382
+2014/09/23 19:02:24 packer-builder-docker: bufio.(*Reader).fill(0xc2080d0300)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/bufio/bufio.go:97 +0x1b3
+2014/09/23 19:02:24 packer-builder-docker: bufio.(*Reader).ReadByte(0xc2080d0300, 0x7384e0, 0x0, 0x0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/bufio/bufio.go:199 +0x7e
+2014/09/23 19:02:24 packer-builder-docker: github.com/ugorji/go/codec.(*ioDecReader).readn1(0xc2080ca270, 0x146)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/ugorji/go/codec/decode.go:93 +0x44
+2014/09/23 19:02:24 packer-builder-docker: github.com/ugorji/go/codec.(*msgpackDecDriver).initReadNext(0xc2080de120)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/ugorji/go/codec/msgpack.go:540 +0x48
+2014/09/23 19:02:24 packer-builder-docker: github.com/ugorji/go/codec.(*Decoder).decode(0xc2080d0360, 0x721440, 0xc208109230)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/ugorji/go/codec/decode.go:616 +0x58
+2014/09/23 19:02:24 packer-builder-docker: github.com/ugorji/go/codec.(*Decoder).Decode(0xc2080d0360, 0x721440, 0xc208109230, 0x0, 0x0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/ugorji/go/codec/decode.go:611 +0x7c
+2014/09/23 19:02:24 packer-builder-docker: github.com/ugorji/go/codec.(*rpcCodec).read(0xc2080f2180, 0x721440, 0xc208109230, 0x0, 0x0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/ugorji/go/codec/rpc.go:88 +0xd6
+2014/09/23 19:02:24 packer-builder-docker: github.com/ugorji/go/codec.(*goRpcCodec).ReadResponseHeader(0xc2080f2180, 0xc208109230, 0x0, 0x0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/ugorji/go/codec/rpc.go:123 +0x5e
+2014/09/23 19:02:24 packer-builder-docker: net/rpc.(*Client).input(0xc2080d03c0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/net/rpc/client.go:109 +0xda
+2014/09/23 19:02:24 packer-builder-docker: created by net/rpc.NewClientWithCodec
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/net/rpc/client.go:201 +0x8b
+2014/09/23 19:02:24 packer-builder-docker: 
+2014/09/23 19:02:24 packer-builder-docker: goroutine 86 [select]:
+2014/09/23 19:02:24 packer-builder-docker: github.com/ActiveState/tail.(*Tail).waitForChanges(0xc2081ae1e0, 0x0, 0x0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/ActiveState/tail/tail.go:277 +0x7ae
+2014/09/23 19:02:24 packer-builder-docker: github.com/ActiveState/tail.(*Tail).tailFileSync(0xc2081ae1e0)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/ActiveState/tail/tail.go:244 +0x82b
+2014/09/23 19:02:24 packer-builder-docker: created by github.com/ActiveState/tail.TailFile
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/ActiveState/tail/tail.go:113 +0x305
+2014/09/23 19:02:24 packer-builder-docker: 
+2014/09/23 19:02:24 packer-builder-docker: goroutine 45 [sleep]:
+2014/09/23 19:02:24 packer-builder-docker: time.Sleep(0xee6b280)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/runtime/time.goc:39 +0x31
+2014/09/23 19:02:24 packer-builder-docker: github.com/ActiveState/tail/watch.func·002()
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/ActiveState/tail/watch/polling.go:64 +0xfd
+2014/09/23 19:02:24 packer-builder-docker: created by github.com/ActiveState/tail/watch.(*PollingFileWatcher).ChangeEvents
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/ActiveState/tail/watch/polling.go:103 +0x1b3
+2014/09/23 19:02:24 packer-builder-docker: 
+2014/09/23 19:02:24 packer-builder-docker: goroutine 73 [sleep]:
+2014/09/23 19:02:24 packer-builder-docker: time.Sleep(0x3b9aca00)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/go/src/pkg/runtime/time.goc:39 +0x31
+2014/09/23 19:02:24 packer-builder-docker: github.com/mitchellh/packer/builder/docker.(*Communicator).run(0xc20815c280, 0xc208042640, 0xc208005080, 0x7f5906637ab8, 0xc2080c7ec0, 0xc20803c1b0, 0xc2080c7b90, 0x2d)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/mitchellh/packer/builder/docker/communicator.go:291 +0xeb4
+2014/09/23 19:02:24 packer-builder-docker: created by github.com/mitchellh/packer/builder/docker.(*Communicator).Start
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/mitchellh/packer/builder/docker/communicator.go:55 +0x2d0
+2014/09/23 19:02:24 packer-builder-docker: 
+2014/09/23 19:02:24 packer-builder-docker: goroutine 88 [select]:
+2014/09/23 19:02:24 packer-builder-docker: github.com/mitchellh/packer/builder/docker.func·003()
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/mitchellh/packer/builder/docker/communicator.go:243 +0x325
+2014/09/23 19:02:24 packer-builder-docker: created by github.com/mitchellh/packer/builder/docker.(*Communicator).run
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/mitchellh/packer/builder/docker/communicator.go:263 +0x926
+2014/09/23 19:02:24 packer-builder-docker: 
+2014/09/23 19:02:24 packer-builder-docker: goroutine 74 [chan receive, 1 minutes]:
+2014/09/23 19:02:24 packer-builder-docker: github.com/mitchellh/packer/packer.(*RemoteCmd).Wait(0xc208005080)
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/mitchellh/packer/packer/communicator.go:181 +0xa5
+2014/09/23 19:02:24 packer-builder-docker: github.com/mitchellh/packer/packer/rpc.func·003()
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/mitchellh/packer/packer/rpc/communicator.go:222 +0xa8
+2014/09/23 19:02:24 packer-builder-docker: created by github.com/mitchellh/packer/packer/rpc.(*CommunicatorServer).Start
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/mitchellh/packer/packer/rpc/communicator.go:225 +0xa1e
+2014/09/23 19:02:24 packer-builder-docker: 
+2014/09/23 19:02:24 packer-builder-docker: goroutine 72 [chan receive, 1 minutes]:
+2014/09/23 19:02:24 packer-builder-docker: github.com/mitchellh/packer/packer/rpc.func·002()
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/mitchellh/packer/packer/rpc/communicator.go:162 +0x44
+2014/09/23 19:02:24 packer-builder-docker: created by github.com/mitchellh/packer/packer/rpc.(*CommunicatorServer).Start
+2014/09/23 19:02:24 packer-builder-docker: 	/opt/gopath/src/github.com/mitchellh/packer/packer/rpc/communicator.go:166 +0x12d
+2014/09/23 19:02:24 [ERR] Error decoding response stream 6: EOF
+2014/09/23 19:02:24 [INFO] 0 bytes written for 'stderr'
+2014/09/23 19:02:24 [INFO] 16638 bytes written for 'stdout'
+2014/09/23 19:02:24 [INFO] RPC endpoint: Communicator ended with: 123
+2014/09/23 19:02:24 /usr/local/bin/packer-builder-docker: plugin process exited
+2014/09/23 19:02:24 packer-command-build: 2014/09/23 19:02:24 [INFO] 16638 bytes written for 'stdout'
+2014/09/23 19:02:24 packer-command-build: 2014/09/23 19:02:24 [INFO] 0 bytes written for 'stderr'
+2014/09/23 19:02:24 ui error: [1;31mBuild 'docker' errored: unexpected EOF[0m
+2014/09/23 19:02:24 packer-command-build: 2014/09/23 19:02:24 [INFO] RPC client: Communicator ended with: 123
+2014/09/23 19:02:24 packer-command-build: 2014/09/23 19:02:24 [INFO] RPC endpoint: Communicator ended with: 123
+2014/09/23 19:02:24 packer-command-build: 2014/09/23 19:02:24 Builds completed. Waiting on interrupt barrier...
+2014/09/23 19:02:24 [INFO] 0 bytes written for 'stderr'
+2014/09/23 19:02:24 [INFO] 16638 bytes written for 'stdout'
+2014/09/23 19:02:24 [INFO] RPC client: Communicator ended with: 123
+2014/09/23 19:02:24 [INFO] RPC endpoint: Communicator ended with: 123
+2014/09/23 19:02:24 ui: Cleanly cancelled builds after being interrupted.
+2014/09/23 19:02:24 waiting for all plugin processes to complete...
+2014/09/23 19:02:24 /usr/local/bin/packer-provisioner-file: plugin process exited
+2014/09/23 19:02:24 /usr/local/bin/packer-post-processor-docker-tag: plugin process exited
+2014/09/23 19:02:24 /usr/local/bin/packer-command-build: plugin process exited

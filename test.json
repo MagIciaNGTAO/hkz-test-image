@@ -1,0 +1,39 @@
+{
+    "variables": {
+        "name": "hkz-test",
+        "namespace": "fitbur",
+        "fqn": "fitbur.hkz.test",
+        "version": "latest",
+        "osName": "ubuntu",
+        "osVersion": "14.04"
+    },
+    "builders": [
+        {
+            "type": "docker",
+            "image": "fitbur/oracle-jdk:latest",
+            "pull": true,
+            "commit": true
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "file",
+            "source": "resources",
+            "destination": "/tmp"
+        },
+        {
+            "type": "shell",
+            "script": "provision.sh"
+        }
+    ],
+    "post-processors": [
+        [
+            {
+                "type": "docker-tag",
+                "repository": "{{user `namespace`}}/{{user `name`}}",
+                "tag": "latest",
+                "only": ["docker"]
+            }
+        ]
+    ]
+}

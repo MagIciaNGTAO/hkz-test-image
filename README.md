@@ -1,4 +1,4 @@
 hkz-test-image
-==============
+================
 
-HBase, Kafka, Zookeepr Test Image
+HBase + Kafka + Zookeeper Test Image
